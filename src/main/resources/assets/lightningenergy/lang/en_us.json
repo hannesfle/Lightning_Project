@@ -2,5 +2,7 @@
   "item.lightningenergy.lightning_ingot" : "Lightning Ingot",
   "item.lightningenergy.energy_ingot" : "Energy Ingot",
 
+  "block.lightningenergy.lightning_pedestal": "Lightning Pedestal",
+
   "itemGroup.lightningenergytab" : "Lightning Energy"
 }

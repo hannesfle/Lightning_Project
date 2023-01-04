@@ -1,6 +1,7 @@
 package net.hannes.lightningenergy;
 
 import com.mojang.logging.LogUtils;
+import net.hannes.lightningenergy.block.ModBlocks;
 import net.hannes.lightningenergy.item.ModItems;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -23,6 +24,7 @@ public class LightningEnergy
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
         ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
 
 
         modEventBus.addListener(this::commonSetup);
