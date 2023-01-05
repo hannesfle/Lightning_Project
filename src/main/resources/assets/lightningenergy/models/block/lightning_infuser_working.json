@@ -1,0 +1,6 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "lightningenergy:block/lightning_infuser_working"
+  }
+}

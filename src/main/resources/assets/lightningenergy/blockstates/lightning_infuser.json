@@ -1,5 +1,6 @@
 {
   "variants": {
-    "": { "model": "lightningenergy:block/lightning_infuser"}
+    "working=false": { "model": "lightningenergy:block/lightning_infuser"},
+    "working=true": { "model": "lightningenergy:block/lightning_infuser_working"}
   }
 }
