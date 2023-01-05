@@ -1,5 +1,7 @@
 package net.hannes.lightningenergy.block.custom;
 
+import net.hannes.lightningenergy.networking.ModMessages;
+import net.hannes.lightningenergy.networking.packet.ExampleC2SPacket;
 import net.minecraft.ChatFormatting;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.core.BlockPos;
@@ -36,7 +38,8 @@ public class LightningInfuserBlock extends Block {
     @Override
     public InteractionResult use(BlockState state, Level level, BlockPos blockPos, Player player, InteractionHand hand, BlockHitResult result) {
         if(!level.isClientSide && hand == InteractionHand.MAIN_HAND) {
-            level.setBlock(blockPos, state.cycle(WORKING), 3); //3 wer alles notified wird
+            level.setBlock(blockPos, state.cycle(WORKING), 3); //3 wer alles notified wird cycle between states
+            ModMessages.sendToServer(new ExampleC2SPacket()); //send msg to server to spawn cow
         }
         return super.use(state, level, blockPos, player, hand, result);
     }
