@@ -1,6 +1,7 @@
 package net.hannes.lightningenergy.block;
 
 import net.hannes.lightningenergy.LightningEnergy;
+import net.hannes.lightningenergy.block.custom.LightningInfuserBlock;
 import net.hannes.lightningenergy.item.ModCreativeModTab;
 import net.hannes.lightningenergy.item.ModItems;
 import net.minecraft.world.item.BlockItem;
@@ -23,6 +24,8 @@ public class ModBlocks {
     public static final RegistryObject<Block> LIGHTNING_PEDESTAL = registerBlock("lightning_pedestal",
             () -> new Block(BlockBehaviour.Properties.of(Material.STONE)) ,ModCreativeModTab.LIGHTNING_ENERGY);  //here you can add more block properties
 
+    public static final RegistryObject<Block> LIGHTNING_INFUSER = registerBlock("lightning_infuser",
+            () -> new LightningInfuserBlock(BlockBehaviour.Properties.of(Material.STONE)) ,ModCreativeModTab.LIGHTNING_ENERGY);
     //function to register block and items
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block, CreativeModeTab tab) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
