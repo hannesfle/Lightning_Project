@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "lightningenergy:lightning_ingot"
+    }
+  ],
+  "result": {
+    "item": "lightningenergy:energy_ingot"
+  }
+}

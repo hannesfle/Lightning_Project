@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "#": {
+      "item": "minecraft:stone"
+    },
+    "R": {
+      "item": "minecraft:redstone"
+    },
+    "T": {
+      "tag": "minecraft:planks"
+    },
+    "X": {
+      "item": "lightningenergy:lightning_ingot"
+    }
+  },
+  "pattern": [
+    "TTT",
+    "#X#",
+    "#R#"
+  ],
+  "result": {
+    "item": "lightningenergy:lightning_ingot"
+  }
+}
