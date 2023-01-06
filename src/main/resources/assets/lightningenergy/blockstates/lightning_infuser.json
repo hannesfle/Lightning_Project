@@ -1,6 +1,21 @@
 {
   "variants": {
     "working=false": { "model": "lightningenergy:block/lightning_infuser"},
-    "working=true": { "model": "lightningenergy:block/lightning_infuser_working"}
+    "working=true": { "model": "lightningenergy:block/lightning_infuser_working"},
+    "facing=north": {
+      "model": "lightningenergy:block/lightning_infuser"
+    },
+    "facing=south": {
+      "model": "lightningenergy:block/lightning_infuser",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "lightningenergy:block/lightning_infuser",
+      "y": 270
+    },
+    "facing=east": {
+      "model": "lightningenergy:block/lightning_infuser",
+      "y": 90
+    }
   }
 }
