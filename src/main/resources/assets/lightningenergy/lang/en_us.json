@@ -5,5 +5,9 @@
   "block.lightningenergy.lightning_pedestal": "Lightning Pedestal",
   "block.lightningenergy.lightning_infuser": "Lightning Infuser",
 
-  "itemGroup.lightningenergytab" : "Lightning Energy"
+  "itemGroup.lightningenergytab" : "Lightning Energy",
+
+  "key.category.lightningenergy.lightningenergy" : "Lightning Energy",
+  "key.lightningenergy.Debug" : "Debug"
+
 }
