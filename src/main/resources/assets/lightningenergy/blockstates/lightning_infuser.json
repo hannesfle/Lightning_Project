@@ -1,7 +1,5 @@
 {
   "variants": {
-    "working=false": { "model": "lightningenergy:block/lightning_infuser"},
-    "working=true": { "model": "lightningenergy:block/lightning_infuser_working"},
     "facing=north": {
       "model": "lightningenergy:block/lightning_infuser"
     },

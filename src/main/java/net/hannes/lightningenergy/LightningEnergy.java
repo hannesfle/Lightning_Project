@@ -2,8 +2,12 @@ package net.hannes.lightningenergy;
 
 import com.mojang.logging.LogUtils;
 import net.hannes.lightningenergy.block.ModBlocks;
+import net.hannes.lightningenergy.block.entity.ModBlockEntities;
 import net.hannes.lightningenergy.item.ModItems;
 import net.hannes.lightningenergy.networking.ModMessages;
+import net.hannes.lightningenergy.screen.LightningInfuserScreen;
+import net.hannes.lightningenergy.screen.ModMenuTypes;
+import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -20,8 +24,7 @@ public class LightningEnergy
     public static final String MOD_ID = "lightningenergy";
     private static final Logger LOGGER = LogUtils.getLogger();
 
-    public LightningEnergy()
-    {
+    public LightningEnergy() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
         ModItems.register(modEventBus);
@@ -30,6 +33,8 @@ public class LightningEnergy
 
         modEventBus.addListener(this::commonSetup);
 
+        ModBlockEntities.register(modEventBus);
+        ModMenuTypes.register(modEventBus);
 
         MinecraftForge.EVENT_BUS.register(this);
     }
@@ -47,6 +52,7 @@ public class LightningEnergy
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event)
         {
+            MenuScreens.register(ModMenuTypes.LIGHTNING_INFUSER_MENU.get(), LightningInfuserScreen::new);
 
         }
     }

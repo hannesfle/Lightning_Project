@@ -1,7 +1,7 @@
 package net.hannes.lightningenergy.networking;
 
 import net.hannes.lightningenergy.LightningEnergy;
-import net.hannes.lightningenergy.networking.packet.ExampleC2SPacket;
+import net.hannes.lightningenergy.networking.packet.SpawnLightningPacket;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraftforge.network.NetworkDirection;
@@ -25,10 +25,10 @@ public class ModMessages {
         INSTANCE = net;
 
         //register the Packets here
-        net.messageBuilder(ExampleC2SPacket.class, id(), NetworkDirection.PLAY_TO_SERVER)
-                .decoder(ExampleC2SPacket::new)
-                .encoder(ExampleC2SPacket::toBytes)
-                .consumerMainThread(ExampleC2SPacket::handle)
+        net.messageBuilder(SpawnLightningPacket.class, id(), NetworkDirection.PLAY_TO_SERVER)
+                .decoder(SpawnLightningPacket::new)
+                .encoder(SpawnLightningPacket::toBytes)
+                .consumerMainThread(SpawnLightningPacket::handle)
                 .add();
 
     }

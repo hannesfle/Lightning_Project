@@ -27,7 +27,7 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> LIGHTNING_INFUSER = registerBlock("lightning_infuser",
             () -> new LightningInfuserBlock(BlockBehaviour.Properties.of(Material.METAL)
-                    .lightLevel(state -> state.getValue(LightningInfuserBlock.WORKING) ? 8 : 0)) ,ModCreativeModTab.LIGHTNING_ENERGY);
+                    .noOcclusion()) ,ModCreativeModTab.LIGHTNING_ENERGY); //hier müsste auch working state rein
 
     //function to register block and items
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block, CreativeModeTab tab) {
